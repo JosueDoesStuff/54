@@ -3,23 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Audio on Click</title>
 </head>
 <body>
+    <h1>Click anywhere on the page to play the audio!</h1>
+
     <!-- Audio element -->
-    <audio id="audio" src="robloc.mp3" autoplay muted></audio>
+    <audio id="audio" src="robloc.mp3"></audio>
 
     <script>
-        // JavaScript to unmute and play the audio on page load
-        window.addEventListener('load', function() {
+        // JavaScript to play the audio on click
+        document.addEventListener('click', function() {
             var audio = document.getElementById('audio');
-            audio.muted = false;
-            audio.play().catch(function(e) {
-                console.log('Audio playback failed: ', e);
-            });
+            audio.play();
         });
     </script>
 </body>
 </html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enable Sound</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      text-align: center;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(360deg, #555555, #1e1e1e);
+      background-repeat: repeat;
+      color: #555;
+      font-weight: bold;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      transition: opacity 1s ease-out;
+    }
+    .fade-out {
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="messageContainer">
+    <p>Press any key to enable sound (required)</p>
+  </div>
+
+  <script>
+    document.body.addEventListener('keydown', () => {
+      const container = document.getElementById('messageContainer');
+      container.classList.add('fade-out');
+      setTimeout(() => {
+        container.style.display = 'none';
+        // Sound enabling logic goes here
+      }, 1000); // Match the transition duration
+    }, { once: true });
+  </script>
+</body>
+</html>
+
 
 
 
