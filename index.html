@@ -10,8 +10,8 @@
     <audio id="audio" src="robloc.mp3"></audio>
 
     <script>
-        // JavaScript to play the audio on click
-        document.addEventListener('click', function() {
+        // JavaScript to play the audio on page load
+        window.addEventListener('load', function() {
             var audio = document.getElementById('audio');
             audio.play();
         });
