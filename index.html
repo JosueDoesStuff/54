@@ -1,4 +1,175 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snowflakes</title>
+<style>
+  body {
+  }
+
+  .intro,
+  .intro a {
+    color: #fff;
+    font-family: ;
+  }
+
+  /* customizable snowflake styling */
+  .snowflake {
+    color: #fff;
+    font-size: 1em;
+    font-family: Arial;
+    text-shadow: 0 0 1px #000;
+    position: fixed;
+    top: -10%;
+    z-index: 9999;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+    -webkit-animation-name: snowflakes-fall, snowflakes-shake;
+    -webkit-animation-duration: 10s, 3s;
+    -webkit-animation-timing-function: linear, ease-in-out;
+    -webkit-animation-iteration-count: infinite, infinite;
+    -webkit-animation-play-state: running, running;
+    animation-name: snowflakes-fall, snowflakes-shake;
+    animation-duration: 10s, 3s;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite, infinite;
+    animation-play-state: running, running;
+  }
+
+  .snowflake:nth-of-type(1) {
+    left: 1%;
+    -webkit-animation-delay: 0s, 0s;
+    animation-delay: 0s, 0s;
+  }
+
+  .snowflake:nth-of-type(2) {
+    left: 10%;
+    -webkit-animation-delay: 1s, 1s;
+    animation-delay: 1s, 1s;
+  }
+
+  .snowflake:nth-of-type(3) {
+    left: 20%;
+    -webkit-animation-delay: 6s, .5s;
+    animation-delay: 6s, .5s;
+  }
+
+  .snowflake:nth-of-type(4) {
+    left: 30%;
+    -webkit-animation-delay: 4s, 2s;
+    animation-delay: 4s, 2s;
+  }
+
+  .snowflake:nth-of-type(5) {
+    left: 40%;
+    -webkit-animation-delay: 2s, 2s;
+    animation-delay: 2s, 2s;
+  }
+
+  .snowflake:nth-of-type(6) {
+    left: 50%;
+    -webkit-animation-delay: 8s, 3s;
+    animation-delay: 8s, 3s;
+  }
+
+  .snowflake:nth-of-type(7) {
+    left: 60%;
+    -webkit-animation-delay: 6s, 2s;
+    animation-delay: 6s, 2s;
+  }
+
+  .snowflake:nth-of-type(8) {
+    left: 70%;
+    -webkit-animation-delay: 2.5s, 1s;
+    animation-delay: 2.5s, 1s;
+  }
+
+  .snowflake:nth-of-type(9) {
+    left: 80%;
+    -webkit-animation-delay: 1s, 0s;
+    animation-delay: 1s, 0s;
+  }
+
+  .snowflake:nth-of-type(10) {
+    left: 90%;
+    -webkit-animation-delay: 3s, 1.5s;
+    animation-delay: 3s, 1.5s;
+  }
+
+  @-webkit-keyframes snowflakes-fall {
+    0% {
+      top: -10%
+    }
+
+    100% {
+      top: 100%
+    }
+  }
+
+  @-webkit-keyframes snowflakes-shake {
+    0% {
+      -webkit-transform: translateX(0px);
+      transform: translateX(0px)
+    }
+
+    50% {
+      -webkit-transform: translateX(80px);
+      transform: translateX(80px)
+    }
+
+    100% {
+      -webkit-transform: translateX(0px);
+      transform: translateX(0px)
+    }
+  }
+
+  @keyframes snowflakes-fall {
+    0% {
+      top: -10%
+    }
+
+    100% {
+      top: 100%
+    }
+  }
+
+  @keyframes snowflakes-shake {
+    0% {
+      transform: translateX(0px)
+    }
+
+    50% {
+      transform: translateX(80px)
+    }
+
+    100% {
+      transform: translateX(0px)
+    }
+  }
+</style>
+</head>
+<body>
+<div class="snowflakes">
+  <div class="snowflake">❅</div>
+  <div class="snowflake">❅</div>
+  <div class="snowflake">❆</div>
+  <div class="snowflake">❄</div>
+  <div class="snowflake">❅</div>
+  <div class="snowflake">❆</div>
+  <div class="snowflake">❄</div>
+  <div class="snowflake">❅</div>
+  <div class="snowflake">❆</div>
+  <div class="snowflake">❄</div>
+</div>
+</body>
+</html>
+
+
+<!DOCTYPE html>
 <html>
 <body>
 
@@ -8,7 +179,7 @@
 window.onload = myFunction;
 
 function myFunction() {
-  alert("wazzup blud this is quantum. pls join the discord we are very silly🤑🤑🤑 https://discord.gg/C8nXfGAr");
+  alert("hey wazza blud quantum is in beta also join the cord https://discord.gg/C8nXfGAr");
 }
 </script>
 
@@ -29,7 +200,9 @@ function myFunction() {
       overflow: hidden;
       margin: 0;
       padding: 0;
-      background-color: #1e1e1e;
+      background: linear-gradient(135deg, #27303c, #354258, 
+#42546e, #4e6684);
+      color: #1e1e1e;
       font-weight: bold;
       color: #555; /* Set text color to gray */
     }
@@ -78,7 +251,6 @@ function myFunction() {
       transform: translate(-50%, -50%);
       width: 200px;
       height: 200px;
-      border: 10px solid #222;
       border-radius: 50%;
       box-sizing: border-box;
       background-image: url('https://clipartcraft.com/images/earth-transparent-animated-gif-8.png');
@@ -227,7 +399,7 @@ function myFunction() {
     <a class="button" onclick="blank('https://sanicbtw.github.io/FNF-PsychEngine-0.6-HTML5/');">
       <img src="https://th.bing.com/th/id/R.7936acf97d736dbfd5613c09a3f6acfa?rik=KxpihNWAM93B5w&pid=ImgRaw&r=0" alt="fnf">
     </a>
-    <a class="button" onclick="blank('https://sans.nyaasu.top/');">
+    <a class="button" onclick="blank('https://hotamago.github.io/sans/');">
       <img src="https://play-lh.googleusercontent.com/T08jAj6GRGQGPOw41mQrvM_bz0ZFbqtZVL8YMbLoAy-Qu6zmLwfV7BNrPCPpUX-ZWQ" alt="sans">
     </a>
 <a class="button" onclick="blank('https://run3unblocked.github.io/');">
@@ -236,7 +408,7 @@ function myFunction() {
 <a class="button" onclick="blank('https://cloudfuntime.vercel.app/clients.html');">
       <img src="https://th.bing.com/th/id/R.281a0334856a6d8e79f15aefa0ef81cf?rik=eigkhhOk15rklw&pid=ImgRaw&r=0" alt="run 3 ">
     </a>
-<a class="button" onclick="blank('https://www.hoodamath.com/mobile/games/duck-life-4/game.html?nocheckorient=1');">
+<a class="button" onclick="blank('https://4hk0.github.io/projects/ducklife4/index.html');">
       <img src="https://img.poki.com/cdn-cgi/image/width=600,height=600,fit=cover,g=0.5x0.5,f=auto/d0048d89-e4fa-4adb-9c77-adc51e4e1c6b.png" alt="run 3 ">
     </a>
 <a class="button" onclick="blank('https://bleafy.github.io/games/cookieclicker/');">
