@@ -5,19 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-
     <!-- Audio element -->
-    <audio id="audio" src="robloc.mp3"></audio>
+    <audio id="audio" src="robloc.mp3" autoplay muted></audio>
 
     <script>
-        // JavaScript to play the audio on page load
+        // JavaScript to unmute and play the audio on page load
         window.addEventListener('load', function() {
             var audio = document.getElementById('audio');
-            audio.play();
+            audio.muted = false;
+            audio.play().catch(function(e) {
+                console.log('Audio playback failed: ', e);
+            });
         });
     </script>
 </body>
 </html>
+
 
 
 
