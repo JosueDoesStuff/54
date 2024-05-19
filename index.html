@@ -170,21 +170,38 @@
 
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function showAlert() {
+                const messages = [
+                    "wazzup blud quantum is in beta. pls join the discord!! https://discord.gg/C8nXfGAr",
+                    "hey this is your battery"
+                ];
+
+                const randomIndex = Math.floor(Math.random() * messages.length);
+
+                if (randomIndex === 0) {
+                    alert(messages[randomIndex]);
+                } else {
+                    navigator.getBattery().then(function(battery) {
+                        const batteryPercentage = Math.round(battery.level * 100) + '%';
+                        alert(messages[randomIndex] + ' ' + batteryPercentage);
+                    });
+                }
+            }
+
+            showAlert();
+        });
+    </script>
+</head>
 <body>
-
-
-<script>
-// Call myFunction when the page loads
-window.onload = myFunction;
-
-function myFunction() {
-  alert("hey wazza blud quantum is in beta also join the cord https://discord.gg/C8nXfGAr");
-}
-</script>
-
 </body>
 </html>
+
 
 <!DOCTYPE html>
 <html lang="en">
