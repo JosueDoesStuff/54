@@ -1,3 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kickass Button</title>
+    <style>
+        #kickassButton {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+        #kickassButton img {
+            width: 240%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <button id="kickassButton">
+        <img src="https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://kickassapp.com/?route=%2F&size=16" alt="Kickass">
+    </button>
+
+    <script>
+        document.getElementById("kickassButton").onclick = function() {
+            var KICKASSVERSION = '2.0';
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            document.body.appendChild(s);
+            s.src = '//hi.kickassapp.com/kickass.js';
+        };
+    </script>
+</body>
+</html>
+
+
 <!-- Start of CuterCounter Code -->
 <a href="https://www.cutercounter.com/" target="_blank"><img src="https://www.cutercounter.com/hits.php?id=hxpoaax&nd=5&style=2" border="0" alt="hit counter"></a>
 <!-- End of CuterCounter Code -->
