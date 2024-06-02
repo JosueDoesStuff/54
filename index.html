@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        #kickassButton {
+        .kickassButton {
             position: absolute;
             top: 0;
             left: 0;
@@ -13,16 +13,48 @@
             border: none;
             background: none;
             cursor: pointer;
+            margin-right: 10px; /* Add margin for spacing */
         }
-        #kickassButton img {
-            width: 240%;
-            height: 100%;
+        .kickassButton img { /* Common styles for button images */
+            width: 250%;
+            height: 110%;
+        }
+        #minecraftButton {
+            position: absolute;
+            top: 0;
+            left: 30px; /* Adjust left position to position it to the right */
+            width: 20px;
+            height: 20px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            margin-right: 10px; /* Add margin for spacing */
+        }
+        #thirdButton {
+            position: absolute;
+            top: 0;
+            left: 60px; /* Adjust left position to position it to the right */
+            width: 20px;
+            height: 20px;
+            border: none;
+            background: none;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <button id="kickassButton">
+    <button id="kickassButton" class="kickassButton">
         <img src="https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://kickassapp.com/?route=%2F&size=16" alt="Kickass">
+    </button>
+
+    <!-- Second Button -->
+    <button id="minecraftButton" class="kickassButton">
+        <img src="https://luphoria.com/favicon.ico" alt="Minecraft Button">
+    </button>
+
+    <!-- Third Button -->
+    <button id="thirdButton" class="kickassButton">
+        <img src="https://avatars.githubusercontent.com/u/141644166?s=48&v=4" alt="Third Button">
     </button>
 
     <script>
@@ -33,9 +65,26 @@
             document.body.appendChild(s);
             s.src = '//hi.kickassapp.com/kickass.js';
         };
+
+        // JavaScript for the Minecraft button
+        document.getElementById("minecraftButton").onclick = function() {
+            var minecraftScript = document.createElement('script');
+            minecraftScript.type = 'text/javascript';
+            minecraftScript.innerHTML = "(function(){window.mcbmRootURI='https://luphoria.com/MCanywhere/';window.mcbmScriptURI='mcbm.min.js';window.mcbmLang='eng';var s,ss=window.mcbmRootURI+'js/mcbm-load.min.js';s=document.createElement('script');s.src=ss;document.body.appendChild(s);})();";
+            document.body.appendChild(minecraftScript);
+        };
+
+        // JavaScript for the third button
+        document.getElementById("thirdButton").onclick = function() {
+            var thirdScript = document.createElement('script');
+            thirdScript.type = 'text/javascript';
+            thirdScript.innerHTML = "var inject = document.createElement('script'); inject.src = 'https://cdn.jsdelivr.net/gh/DaxCodes/caraxlev9-nonbookmarklet/inject.js'; document.body.appendChild(inject);";
+            document.body.appendChild(thirdScript);
+        };
     </script>
 </body>
 </html>
+
 
 
 <!-- Start of CuterCounter Code -->
